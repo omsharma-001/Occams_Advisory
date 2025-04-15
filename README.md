@@ -1,4 +1,4 @@
-Occam's Advisory Inc. Q&A Assistant
+# **OCCAM'S ADVISORY INC. Q&A ASSISTANT**
 
 This project enables intelligent question answering strictly related to **Occam's Advisory Inc.**, leveraging Google Gemini API. It uses a layered architecture involving:
 

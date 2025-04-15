@@ -122,7 +122,7 @@ http://localhost:3000
 ## 📌 Notes
 
 - Used Customize `data.txt` to simulate RAG-like behavior.
-- You can add support for file-based grounding or document search in `/rag`.
+- We can add support for file-based grounding or document search in `/rag`.
 
 ---
 ![Screenshot 2025-04-15 235239](https://github.com/user-attachments/assets/c1faf426-1164-4a59-9e31-52b32c1059a2)

@@ -128,5 +128,4 @@ http://localhost:3000
 ![Screenshot 2025-04-15 235239](https://github.com/user-attachments/assets/c1faf426-1164-4a59-9e31-52b32c1059a2)
 ![Screenshot 2025-04-15 235304](https://github.com/user-attachments/assets/e49d8d54-2346-4a14-9db7-f4b3351e3478)
 ![Screenshot 2025-04-15 235332](https://github.com/user-attachments/assets/a1045b27-8f42-44e2-aeea-22d5723318f1)
-![Screenshot 2025-04-15 235443](https://github.com/user-attachments/assets/8226e3b2-129c-4a6e-80d3-f1383d36df79)
 

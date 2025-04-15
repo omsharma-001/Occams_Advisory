@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Occams Chatbot</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    #response {
+      margin-top: 20px;
+      padding: 10px;
+      border: 1px solid #ddd;
+      background-color: #f9f9f9;
+      max-width: 500px;
+      margin: 20px auto;
+    }
+    input {
+      padding: 10px;
+      width: 80%;
+      margin-top: 20px;
+    }
+    button {
+      padding: 10px 15px;
+      font-size: 16px;
+      margin-top: 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h2>Ask Occams Advisory</h2>
+
+  <!-- Input field for the question -->
+  <input id="question" placeholder="Type your question..." />
+
+  <!-- Button to trigger the ask function -->
+  <button onclick="ask()">Ask</button>
+
+  <!-- Area where the response will be displayed -->
+  <p id="response"></p>
+
+  <script>
+    // Function to send the question to the server and get the response
+    async function ask() {
+      const question = document.getElementById('question').value;  // Get the value of the input field
+      if (!question) {
+        document.getElementById('response').innerText = 'Please enter a question!';
+        return;
+      }
+
+      try {
+        // Sending a POST request to the Node.js backend
+        const res = await fetch('/ask', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ question })  // Send the question in the body
+        });
+
+        // Check if the response is successful
+        if (res.ok) {
+          const data = await res.json();
+          document.getElementById('response').innerText = data.answer;  // Display the answer
+        } else {
+          throw new Error('Failed to get a valid response');
+        }
+      } catch (error) {
+        document.getElementById('response').innerText = `Error: ${error.message}`;  // Display error message
+      }
+    }
+  </script>
+</body>
+</html>

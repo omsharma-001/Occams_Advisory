@@ -79,7 +79,7 @@ http://localhost:3000
 
 ## 📌 Notes
 
-- Customize `data.txt` to simulate RAG-like behavior.
+- Used Customize `data.txt` to simulate RAG-like behavior.
 - You can add support for file-based grounding or document search in `/rag`.
 
 ---
